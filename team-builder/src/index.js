@@ -33,12 +33,13 @@ const submit = (evt) => {
   }
 
   setTeam(team.concat(newTeam));
+  setFormValues(initialFormValues);
 }
 
 return (
   <div className='container'>
     <h1>Team Builder App</h1>
-    {teamList.map((member, idx) => (
+    {team.map((member, idx) => (
       <div key={idx}>
          Name: {member.name}  Email: {member.email}  Role: {member.role}
       </div>
